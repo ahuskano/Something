@@ -3,4 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+
+    <!-- navigation items-->
+    <string name="nav_item_dashboard_titile">Home</string>
+    <string name="nav_item_list_title">List</string>
 </resources>
