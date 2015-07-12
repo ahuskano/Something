@@ -1,6 +1,6 @@
 package co.ahuskano.something.api;
 
-import com.google.gson.annotations.Expose;
+import java.util.List;
 
 import co.ahuskano.something.models.RestaurantDBModel;
 
@@ -9,14 +9,13 @@ import co.ahuskano.something.models.RestaurantDBModel;
  */
 public class BaseResponse {
 
-    @Expose
-    private RestaurantDBModel[] restaurants;
+    private List<RestaurantDBModel> restaurants;
 
-    public RestaurantDBModel[] getRestaurants() {
+    public List<RestaurantDBModel> getRestaurants() {
         return restaurants;
     }
 
-    public void setRestaurants(RestaurantDBModel[] restaurants) {
+    public void setRestaurants(List<RestaurantDBModel> restaurants) {
         this.restaurants = restaurants;
     }
 }

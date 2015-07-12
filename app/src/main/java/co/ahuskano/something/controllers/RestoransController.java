@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import co.ahuskano.something.api.BaseResponse;
 import co.ahuskano.something.api.RepslyAPI;
 import co.ahuskano.something.api.RestaurantAPIModel;
 import co.ahuskano.something.models.RestaurantDBModel;
@@ -38,24 +39,29 @@ public class RestoransController extends DialogController {
 
 
     public void getRestorans() {
-        download();
+        showDialog();
+        if (RestaurantDBModel.getRestorans().size() > 0)
+            getFromDB();
+        else if (APIUtils.isNetworkAvailable(getActivity()))
+            download();
     }
 
     public void download() {
         APIUtils.getRestAdapter(RepslyAPI.API_LOCATION).create(RepslyAPI.class).getRestorans(callbackRestorans);
     }
 
+    private void getFromDB() {
+        goNext();
+    }
 
-    private void goNext(Boolean enable) {
-        if (enable) {
-            if (getOnDataReadListener() != null)
-                getOnDataReadListener().onDataReceive(null);
-            else {
-                if (getOnDataErrorListener() != null)
-                    getOnDataErrorListener().onDataErrorReceive(null);
 
-            }
+    private void goNext() {
+        BaseResponse response = new BaseResponse();
+        response.setRestaurants(RestaurantDBModel.getRestorans());
+        if (getOnDataReadListener() != null) {
+            getOnDataReadListener().onDataReceive(response);
         }
+        dismissDialog();
     }
 
     private class SaveData extends AsyncTask<RestaurantAPIModel[], String, Boolean> {
@@ -64,7 +70,7 @@ public class RestoransController extends DialogController {
         @Override
         protected void onPostExecute(Boolean enable) {
             super.onPostExecute(enable);
-            goNext(enable);
+            goNext();
         }
 
         @Override

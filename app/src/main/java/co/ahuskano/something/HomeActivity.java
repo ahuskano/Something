@@ -28,6 +28,8 @@ public class HomeActivity extends AppCompatActivity {
         content = findViewById(R.id.content);
         initToolbar();
         setupDrawerLayout();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, FragmentUtils.provideFragment(1)).commit();
+
     }
 
 

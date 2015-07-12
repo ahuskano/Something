@@ -1,5 +1,7 @@
 package co.ahuskano.something.controllers;
 
+import android.util.Log;
+
 import co.ahuskano.something.api.BaseResponse;
 import retrofit.Callback;
 import retrofit.RetrofitError;

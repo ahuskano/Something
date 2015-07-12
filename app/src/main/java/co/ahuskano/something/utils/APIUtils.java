@@ -1,5 +1,7 @@
 package co.ahuskano.something.utils;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
 import android.util.Log;
 
 import com.google.gson.FieldNamingPolicy;
@@ -22,5 +24,10 @@ public class APIUtils {
                 Log.d(RETROFIT_DEBUG, message);
             }
         }).build();
+    }
+
+    public static boolean isNetworkAvailable(final Context context) {
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
+        return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }
 }

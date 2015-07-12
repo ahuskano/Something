@@ -17,11 +17,11 @@ public class FragmentUtils {
     public static Fragment provideFragment(int ID) {
         switch (ID) {
             case KEY_FRAGMENT_DASHBOARD:
-                return new FragmentDashboard();
+                return new FragmentList();
             case KEY_FRAGMENT_LIST:
                 return new FragmentList();
             default:
-                return new FragmentDashboard();
+                return new FragmentList();
         }
     }
 }

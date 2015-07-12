@@ -3,6 +3,9 @@ package co.ahuskano.something.models;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
+
+import java.util.List;
 
 /**
  * Created by ahuskano on 11.7.2015..
@@ -62,5 +65,9 @@ public class RestaurantDBModel extends Model {
 
     public void setLatitude(String latitude) {
         this.latitude = latitude;
+    }
+
+    public static List<RestaurantDBModel> getRestorans(){
+        return new Select().from(RestaurantDBModel.class).execute();
     }
 }
