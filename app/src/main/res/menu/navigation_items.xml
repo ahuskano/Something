@@ -16,5 +16,11 @@
             android:orderInCategory="2"
             android:title="@string/nav_item_list_title" />
 
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_action_back"
+            android:orderInCategory="3"
+            android:title="@string/nav_item_map_title" />
+
     </group>
 </menu>

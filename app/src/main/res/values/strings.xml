@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Something</string>
-
+    <string name="api_key">AIzaSyCykUrJ2JtieMRIq7ZchoKStlWQtcMt92w</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
@@ -8,4 +8,11 @@
     <!-- navigation items-->
     <string name="nav_item_dashboard_titile">Home</string>
     <string name="nav_item_list_title">List</string>
+    <string name="nav_item_map_title">Map</string>
+
+    <!-- restaurant activity -->
+    <string name="restaurant_activity_name">Name</string>
+    <string name="restaurant_activity_address">Address</string>
+    <string name="restaurant_activity_new_picture">New picture</string>
+
 </resources>

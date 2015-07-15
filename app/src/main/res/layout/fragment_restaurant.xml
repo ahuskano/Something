@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/photo"
+        android:src="@drawable/restaurant_default"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/icone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_about" />
+
+        <TextView
+            android:id="@+id/tvNameLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icone"
+            android:text="@string/restaurant_activity_name" />
+
+        <TextView
+            android:id="@+id/tvNameValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameLabel"
+            android:layout_toRightOf="@id/icone" />
+        <TextView
+            android:id="@+id/tvMeters"
+            android:text="10m"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/icone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_location_found" />
+
+        <TextView
+            android:id="@+id/tvAddressLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icone2"
+            android:text="@string/restaurant_activity_address" />
+
+        <TextView
+            android:id="@+id/tvAddressValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddressLabel"
+            android:layout_toRightOf="@id/icone2" />
+    </RelativeLayout>
+
+</LinearLayout>
