@@ -2,7 +2,9 @@ apply plugin: 'com.android.application'
 
 repositories {
     mavenCentral()
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
 }
 
 android {
@@ -33,5 +35,10 @@ dependencies {
     compile 'com.android.support:cardview-v7:22.2.0'
     compile 'com.android.support:recyclerview-v7:22.2.0'
     compile 'com.google.android.gms:play-services:7.5.0'
+    compile ('io.nlopez.smartlocation:library:3.0.11') {
+        transitive = false
+    }
+    compile 'com.afollestad:material-dialogs:0.7.4.1'
+    compile 'de.psdev.formvalidations:formvalidations:1.1.1@aar'
 
 }

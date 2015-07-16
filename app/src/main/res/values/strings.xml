@@ -14,5 +14,23 @@
     <string name="restaurant_activity_name">Name</string>
     <string name="restaurant_activity_address">Address</string>
     <string name="restaurant_activity_new_picture">New picture</string>
+    <string name="restaurant_activity_map">Map</string>
+    <string name="restaurant_activity_edit">Edit restaurant</string>
+
+    <string name="restaurant_activity_distance">Distance</string>
+    <string name="restaurant_activity_distance_placeholder">Not found</string>
+
+    <string name="dialog_name_label">Name</string>
+    <string name="dialog_address_label">Address</string>
+    <string name="dialog_positive_button">Save</string>
+    <string name="dialog_negative_button">Cancel</string>
+    <string name="dialog_edit_title">Edit restaurant</string>
+    <string name="dialog_new_title">New restaurant</string>
+    <string name="dialog_neutral_button">Location</string>
+    <string name="dialog_location_updated">Location updated</string>
+    <string name="dialog_restaurant_savedn">Restaurant saved</string>
+
+    <string name="error_msg_picture_taking">Not able to take image</string>
+    <string name="error_msg_picture_saving">Not able to save image</string>
 
 </resources>

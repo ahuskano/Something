@@ -4,22 +4,15 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_dashboard"
-            android:checked="true"
-            android:icon="@drawable/ic_action_back"
-            android:orderInCategory="1"
-            android:title="@string/nav_item_dashboard_titile" />
-
-        <item
             android:id="@+id/nav_list"
-            android:icon="@drawable/ic_action_back"
-            android:orderInCategory="2"
+            android:icon="@drawable/ic_action_favorite"
+            android:orderInCategory="1"
             android:title="@string/nav_item_list_title" />
 
         <item
             android:id="@+id/nav_map"
-            android:icon="@drawable/ic_action_back"
-            android:orderInCategory="3"
+            android:icon="@drawable/ic_action_map"
+            android:orderInCategory="2"
             android:title="@string/nav_item_map_title" />
 
     </group>

@@ -25,6 +25,9 @@ public class RestaurantDBModel extends Model {
     @Column(name = "latitude")
     private String latitude;
 
+    @Column(name="picture")
+    private String picture;
+
     public RestaurantDBModel() {
     }
 
@@ -33,6 +36,14 @@ public class RestaurantDBModel extends Model {
         this.address = address;
         this.longitude = longitude;
         this.latitude = latitude;
+    }
+
+    public RestaurantDBModel(String name, String address, String longitude, String latitude, String picture) {
+        this.name = name;
+        this.address = address;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.picture = picture;
     }
 
     public String getName() {
@@ -67,7 +78,19 @@ public class RestaurantDBModel extends Model {
         this.latitude = latitude;
     }
 
-    public static List<RestaurantDBModel> getRestorans(){
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public static List<RestaurantDBModel> getRestorans() {
         return new Select().from(RestaurantDBModel.class).execute();
+    }
+
+    public static RestaurantDBModel getRestoran(long id) {
+        return new Select().from(RestaurantDBModel.class).where("Id=?", id).executeSingle();
     }
 }

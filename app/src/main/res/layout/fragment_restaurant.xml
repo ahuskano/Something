@@ -1,74 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/activity_padding">
 
-
-    <ImageView
-        android:id="@+id/photo"
-        android:src="@drawable/restaurant_default"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="200dp" />
+        android:layout_height="fill_parent">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/icone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_about" />
 
-        <TextView
-            android:id="@+id/tvNameLabel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/icone"
-            android:text="@string/restaurant_activity_name" />
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/restaurant_default" />
 
-        <TextView
-            android:id="@+id/tvNameValue"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvNameLabel"
-            android:layout_toRightOf="@id/icone" />
-        <TextView
-            android:id="@+id/tvMeters"
-            android:text="10m"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fragment_restaurant_padding">
 
-    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/icone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_about" />
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
+                <TextView
+                    android:id="@+id/tvDistanceLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icone"
+                    android:text="@string/restaurant_activity_distance"
+                    android:textSize="@dimen/text_size_important" />
 
-        <ImageView
-            android:id="@+id/icone2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_location_found" />
+                <TextView
+                    android:id="@+id/tvDistanceValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDistanceLabel"
+                    android:layout_toRightOf="@id/icone"
+                    android:text="@string/restaurant_activity_distance_placeholder"
+                    android:textSize="@dimen/text_size_not_important" />
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tvAddressLabel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/icone2"
-            android:text="@string/restaurant_activity_address" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fragment_restaurant_padding">
 
-        <TextView
-            android:id="@+id/tvAddressValue"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvAddressLabel"
-            android:layout_toRightOf="@id/icone2" />
-    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/icone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_location_found" />
+
+                <TextView
+                    android:id="@+id/tvAddressLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icone2"
+                    android:text="@string/restaurant_activity_address"
+                    android:textSize="@dimen/text_size_important" />
+
+                <TextView
+                    android:id="@+id/tvAddressValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAddressLabel"
+                    android:layout_toRightOf="@id/icone2"
+                    android:textSize="@dimen/text_size_not_important" />
+            </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="-32dp"
+                android:src="@drawable/ic_action_new_picture"
+                app:borderWidth="0dp"
+                app:elevation="4dp"
+                app:fabSize="normal" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

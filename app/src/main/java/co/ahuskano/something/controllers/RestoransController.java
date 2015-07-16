@@ -44,6 +44,9 @@ public class RestoransController extends DialogController {
             getFromDB();
         else if (APIUtils.isNetworkAvailable(getActivity()))
             download();
+        else{
+            dismissDialog();
+        }
     }
 
     public void download() {
